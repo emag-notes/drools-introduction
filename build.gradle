@@ -21,6 +21,8 @@ dependencies {
   compile 'org.drools:drools-core'
   compile 'org.drools:drools-decisiontables'
 
+  compile 'org.twitter4j:twitter4j-stream:4.0.2'
+
   compile 'ch.qos.logback:logback-classic:1.1.2'
 }
 
