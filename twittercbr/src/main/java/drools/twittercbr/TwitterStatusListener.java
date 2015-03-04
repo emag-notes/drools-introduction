@@ -1,6 +1,6 @@
 package drools.twittercbr;
 
-import org.kie.api.runtime.rule.EntryPoint;
+import org.drools.runtime.rule.WorkingMemoryEntryPoint;
 import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
@@ -11,9 +11,9 @@ import twitter4j.StatusListener;
  */
 public class TwitterStatusListener implements StatusListener {
 
-  private EntryPoint ep;
+  private WorkingMemoryEntryPoint ep;
 
-  public TwitterStatusListener(EntryPoint ep) {
+  public TwitterStatusListener(WorkingMemoryEntryPoint ep) {
     this.ep = ep;
   }
 

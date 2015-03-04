@@ -53,3 +53,5 @@ rebel.xml
 # Office
 .~lock.*#
 
+# Twitter4J
+twitter4j.properties

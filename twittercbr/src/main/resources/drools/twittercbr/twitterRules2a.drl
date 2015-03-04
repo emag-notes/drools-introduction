@@ -9,9 +9,9 @@ declare Status
     @expires( 2s )
 end
 
-rule "Dump tweets"
+rule "Dump tweets from japanese people laughing"
 when
-    $s : Status() from entry-point "twitter"
+    $s : Status( text matches ".*www.*" ) from entry-point "twitter"
 then
     System.out.println( MessageFormat.format(
         "[{0,time,full}] @{1} - {2}",
