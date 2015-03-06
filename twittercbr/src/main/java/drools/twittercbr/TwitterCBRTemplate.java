@@ -26,7 +26,14 @@ abstract class TwitterCBRTemplate {
 
   private StatefulKnowledgeSession ksession;
 
-  void invoke(String fileName) {
+  void invoke(String... args) {
+    if(args.length == 0) {
+      System.err.println("Please provide the rules file name to load.");
+      System.err.println("e.g. 'twitterRules1.drl'");
+      System.exit( 0 );
+    }
+
+    String fileName = args[0];
     KnowledgeBase kbase = createKnowledgeBase("drools/twittercbr/" + fileName);
     this.ksession = createKnowledgeSession(kbase);
     WorkingMemoryEntryPoint ep = ksession.getWorkingMemoryEntryPoint("twitter");

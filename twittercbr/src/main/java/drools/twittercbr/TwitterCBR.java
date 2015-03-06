@@ -12,7 +12,7 @@ import twitter4j.TwitterStreamFactory;
 public class TwitterCBR extends TwitterCBRTemplate {
 
   public static void main(String[] args) throws Exception {
-    new TwitterCBR().invoke("twitterRules1.drl");
+    new TwitterCBR().invoke(args);
   }
 
   @Override

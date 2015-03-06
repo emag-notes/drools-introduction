@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class TwitterCBROffline extends TwitterCBRTemplate {
 
   public static void main(String[] args) throws Exception {
-    new TwitterCBROffline().invoke("twitterRules1.drl");
+    new TwitterCBROffline().invoke(args);
   }
 
   @Override

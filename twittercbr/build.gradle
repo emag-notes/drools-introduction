@@ -23,10 +23,16 @@ dependencies {
 
 task 'run-twittercbr' (type: JavaExec) {
   classpath = sourceSets.main.runtimeClasspath
+  if (project.hasProperty('fileName')) {
+    args project.fileName.split('\\s+')
+  }
   main = "drools.twittercbr.TwitterCBR"
 }
 
 task 'run-twittercbr-offline' (type: JavaExec) {
   classpath = sourceSets.main.runtimeClasspath
+  if (project.hasProperty('fileName')) {
+    args project.fileName.split('\\s+')
+  }
   main = "drools.twittercbr.TwitterCBROffline"
 }
